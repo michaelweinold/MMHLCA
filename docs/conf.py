@@ -32,7 +32,7 @@ extensions = [
     # Jupyter Notebook support
     'nbsphinx',
     # API documentation support
-    'autoapi',
+    #'autoapi',
     # responsive web component support
     'sphinx_design',
     # custom 404 page
@@ -43,9 +43,9 @@ extensions = [
     "sphinx_copybutton",
 ]
 
-html_static_path = ['_static']
-templates_path = ['_templates']
+html_static_path = ['source/_static']
 exclude_patterns = ['_build']
+templates_path = ['source/_templates']
 html_theme = "pydata_sphinx_theme"
 
 # The root toctree document.
@@ -80,36 +80,36 @@ And remember, every little bit counts in the grand scheme of things.
 ## autoapi configuration ################################################
 ## https://sphinx-autoapi.readthedocs.io/en/latest/reference/config.html#customisation-options
 
-autoapi_options = [
-    'members',
-    'undoc-members',
-    'private-members',
-    'show-inheritance',
-    'show-module-summary',
-    #'special-members',
-    #'imported-members',
-    'show-inheritance-diagram'
-]
+#autoapi_options = [
+#    'members',
+#    'undoc-members',
+#    'private-members',
+#    'show-inheritance',
+#    'show-module-summary',
+#    #'special-members',
+#    #'imported-members',
+#    'show-inheritance-diagram'
+#]
 
-autoapi_python_class_content = 'both'
-autoapi_member_order = 'groupwise'
-autoapi_root = 'source/api'
-autoapi_keep_files = False
+#autoapi_python_class_content = 'both'
+#autoapi_member_order = 'groupwise'
+#autoapi_root = 'source/api'
+#autoapi_keep_files = False
 
-autoapi_dirs = []
+#autoapi_dirs = ['../mmhlca']
 
-autoapi_ignore = [
-    '*/data/*',
-    '*tests/*',
-    '*tests.py',
-    '*validation.py',
-    '*version.py',
-    '*.rst',
-    '*.yml',
-    '*.md',
-    '*.json',
-    '*.data'
-]
+#autoapi_ignore = [
+#    '*/data/*',
+#    '*tests/*',
+#    '*tests.py',
+#    '*validation.py',
+#    '*version.py',
+#    '*.rst',
+#    '*.yml',
+#    '*.md',
+#    '*.json',
+#    '*.data'
+#]
 
 ## myst_parser configuration ############################################
 ## https://myst-parser.readthedocs.io/en/latest/configuration.html
@@ -137,8 +137,6 @@ nbsphinx_allow_errors = True
 
 ## version-switcher configuration #######################################
 
-version: str = 'latest'
-
 ## html configuration ###################################################
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
@@ -149,7 +147,7 @@ html_show_copyright = True
 
 # https://pydata-sphinx-theme.readthedocs.io/en/stable/
 html_theme_options = {
-    "navbar_start": ["navbar-logo", "version-switcher"],
+    "navbar_start": ["navbar-logo"],
     "header_links_before_dropdown": 7,
     "collapse_navigation": True,
     "footer_start": ["copyright"],
