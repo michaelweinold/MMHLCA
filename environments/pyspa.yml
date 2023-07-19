@@ -1,0 +1,10 @@
+name: pyspa
+channels:
+  - conda-forge
+dependencies:
+  # core functionality
+  - python=3.10
+  - pip
+  - pip:
+  # life-cycle assessment
+    - pyspa==2.4
