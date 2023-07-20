@@ -1,0 +1,15 @@
+{
+	"configurations": [
+		{
+			"name": "Custom Debugger",
+			"type": "python",
+			"request": "launch",
+			"program": "${file}",
+			"console": "integratedTerminal",
+			"stopOnEntry": false,
+			"autoReload": false,
+			"redirectOutput": true,
+			"justMyCode": true, // cf. https://github.com/microsoft/vscode-jupyter/issues/9815
+		},
+	]
+}

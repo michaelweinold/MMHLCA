@@ -1,14 +1,7 @@
 # %%
 
-# pyspa requirements
-import numpy as np
-import pandas as pd
-import scipy as sp
-
-# local import requirements
 import os
 import sys
-
 pyspa_local_path = os.path.join(
     os.path.expanduser("~"),
     "github/pyspa"
@@ -16,6 +9,8 @@ pyspa_local_path = os.path.join(
 sys.path.append(pyspa_local_path)
 
 import pyspa
+
+# %%
 
 sc = pyspa.get_spa(
     target_ID = 70,

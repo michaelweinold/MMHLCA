@@ -4,7 +4,14 @@ channels:
 dependencies:
   # core functionality
   - python=3.10
+  # notebook support
+  - jupyterlab
+  # scientific computing
+  - numpy
+  - scipy
+  - pandas
+  # pip package support
   - pip
   - pip:
   # life-cycle assessment
-    - pyspa==2.4
+  #  - pyspa==2.4 # local import preferred for debugging
